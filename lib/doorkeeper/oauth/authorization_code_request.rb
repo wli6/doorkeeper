@@ -9,13 +9,14 @@ module Doorkeeper
       validate :grant,        error: :invalid_grant
       validate :redirect_uri, error: :invalid_grant
 
-      attr_accessor :server, :grant, :client, :redirect_uri, :access_token
+      attr_accessor :server, :grant, :client, :redirect_uri, :access_token, :adfs_uri
 
       def initialize(server, grant, client, parameters = {})
         @server = server
         @client = client
         @grant  = grant
         @redirect_uri = parameters[:redirect_uri]
+        @adfs_uri = parameters[:adfs_uri]
       end
 
       private

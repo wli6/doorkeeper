@@ -27,6 +27,22 @@
     </div>
   <% end %>
 
+  <%= content_tag :div, class: "form-group#{' has-error' if application.errors[:adfs_uri].present?}" do %>
+    <%= f.label :adfs_uri, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_area :adfs_uri, class: 'form-control' %>
+      <%= doorkeeper_errors_for application, :adfs_uri %>
+      <span class="help-block">
+         <%= t('doorkeeper.applications.help.adfs_uri') %>
+        </span>
+      <% if Doorkeeper.configuration.native_redirect_uri %>
+          <span class="help-block">
+            <%= raw t('doorkeeper.applications.help.native_redirect_uri', native_redirect_uri: "<code>#{ Doorkeeper.configuration.native_redirect_uri }</code>") %>
+          </span>
+      <% end %>
+    </div>
+  <% end %>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.submit t('doorkeeper.applications.buttons.submit'), class: "btn btn-primary" %>

@@ -26,6 +26,20 @@
         </tr>
       <% end %>
     </table>
+
+    <table>
+      <% @application.adfs_uri.split.each do |uri| %>
+        <tr>
+          <td>
+            <code><%= uri %></code>
+          </td>
+          <td>
+            <%= link_to t('doorkeeper.applications.buttons.authorize'), oauth_authorization_path(client_id: @application.uid, adfs_uri: uri, response_type: 'code'), class: 'btn btn-success', target: '_blank' %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+
   </div>
 
   <div class="col-md-4">
