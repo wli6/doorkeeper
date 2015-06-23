@@ -35,11 +35,7 @@
       <span class="help-block">
          <%= t('doorkeeper.applications.help.adfs_uri') %>
         </span>
-      <% if Doorkeeper.configuration.native_redirect_uri %>
-          <span class="help-block">
-            <%= raw t('doorkeeper.applications.help.native_redirect_uri', native_redirect_uri: "<code>#{ Doorkeeper.configuration.native_redirect_uri }</code>") %>
-          </span>
-      <% end %>
+ 
     </div>
   <% end %>
 
