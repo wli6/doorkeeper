@@ -14,6 +14,7 @@ module Doorkeeper
     end
 
     def create
+      raise
       @application = Application.new(application_params)
       if @application.save
         flash[:notice] = I18n.t(:notice, scope: [:doorkeeper, :flash, :applications, :create])
