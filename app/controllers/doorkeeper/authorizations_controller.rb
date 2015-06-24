@@ -3,7 +3,6 @@ module Doorkeeper
     before_filter :authenticate_resource_owner!
 
     def new
-      raise
       if pre_auth.authorizable?
         if skip_authorization? || matching_token?
           auth = authorization.authorize
