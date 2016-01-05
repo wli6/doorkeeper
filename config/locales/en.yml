@@ -29,6 +29,8 @@ en:
       help:
         redirect_uri: 'Use one line per URI'
         native_redirect_uri: 'Use %{native_redirect_uri} for local tests'
+        adfs_uri: "ADFS server URL.(e.g. https://win-ud6s5gibjic.bi.local/adfs/ls)"
+        default_group_id: "if no group infomation get from ADFS server, the user's default group id"
       edit:
         title: 'Edit application'
       index:
