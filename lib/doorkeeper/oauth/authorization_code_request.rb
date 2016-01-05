@@ -9,7 +9,7 @@ module Doorkeeper
       validate :grant,        error: :invalid_grant
       validate :redirect_uri, error: :invalid_grant
 
-      attr_accessor :server, :grant, :client, :redirect_uri, :access_token, :adfs_uri
+      attr_accessor :server, :grant, :client, :redirect_uri, :access_token, :adfs_uri, :default_group_id
 
       def initialize(server, grant, client, parameters = {})
         @server = server
