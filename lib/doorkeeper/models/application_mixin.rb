@@ -17,7 +17,7 @@ module Doorkeeper
       before_validation :generate_uid, :generate_secret, on: :create
 
       if respond_to?(:attr_accessible)
-        attr_accessible :name, :redirect_uri, :adfs_uri, :default_group_id
+        attr_accessible :name, :redirect_uri, :adfs_uri, :default_group_id, :default_building_id
       end
     end
 
