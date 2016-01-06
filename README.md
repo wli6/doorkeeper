@@ -1,3 +1,9 @@
+# BUILDING INTELLIGENCE 
+
+Add ADFS integration support.
+
+add default group id, default building id setting for application.
+
 # Doorkeeper - awesome oauth provider for your Rails app.
 
 [![Build Status](https://travis-ci.org/doorkeeper-gem/doorkeeper.svg?branch=master)](https://travis-ci.org/doorkeeper-gem/doorkeeper)
@@ -7,6 +13,8 @@
 
 Doorkeeper is a gem that makes it easy to introduce OAuth 2 provider
 functionality to your Rails or Grape application.
+
+
 
 [PR 567]: https://github.com/doorkeeper-gem/doorkeeper/pull/567
 
